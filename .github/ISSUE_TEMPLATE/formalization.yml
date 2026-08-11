@@ -1,0 +1,40 @@
+name: Formalization request
+description: An accepted card that is ready for someone to turn into Lean.
+title: "[formalize] "
+labels: ["formalization"]
+body:
+  - type: input
+    id: card
+    attributes:
+      label: Card
+      description: Which card does this formalize?
+      placeholder: cards/0002-hyperbolic-reversal.md
+    validations:
+      required: true
+
+  - type: textarea
+    id: shape
+    attributes:
+      label: Suggested shape
+      description: A sketch of the declarations involved, if you have one.
+      render: lean
+
+  - type: textarea
+    id: pitfalls
+    attributes:
+      label: Known pitfalls
+      description: >-
+        Places where the informal statement hides real work (e.g., a limit
+        argument that needs an explicit witness, a side condition that papers
+        usually omit, or a Mathlib lemma that may or may not exist).
+
+  - type: dropdown
+    id: difficulty
+    attributes:
+      label: Rough difficulty
+      options:
+        - Good first formalization
+        - Moderate
+        - Hard or open-ended
+    validations:
+      required: true

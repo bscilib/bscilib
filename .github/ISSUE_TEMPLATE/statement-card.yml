@@ -1,0 +1,64 @@
+name: Statement card proposal
+description: Propose a claim that belongs in BSciLib. No Lean required.
+title: "[card] "
+labels: ["needs card"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This is the main way to contribute. You are describing a claim you
+        think the library should contain, rather than writing a proof.
+
+        If you would rather open a pull request directly, copy an existing file
+        in [`cards/`](../../tree/main/cards). This issue form exists so that you
+        do not have to.
+
+  - type: input
+    id: title
+    attributes:
+      label: The claim, in one line
+      placeholder: Exponential discounting admits no preference reversal under a common front-end delay
+    validations:
+      required: true
+
+  - type: textarea
+    id: statement
+    attributes:
+      label: The claim, stated as precisely as you can
+      description: >-
+        Please phrase the claim as an implication. For example, "organisms
+        discount hyperbolically" is an empirical assertion rather than a card,
+        whereas "if discounting is hyperbolic with k > 0, then preference
+        reversal occurs for some front-end delay" works well.
+    validations:
+      required: true
+
+  - type: textarea
+    id: assumptions
+    attributes:
+      label: What does the claim need to be true?
+      description: >-
+        One per line. Prose is fine, since naming them is what matters. If you
+        cannot name them all, that is worth reporting too.
+      placeholder: |
+        - Value is separable in amount and delay
+        - The discount function is stationary
+    validations:
+      required: true
+
+  - type: input
+    id: source
+    attributes:
+      label: Source
+      description: Catalog entry id, DOI, or citation. "Folk knowledge, never stated in print" is an acceptable and interesting answer.
+    validations:
+      required: true
+
+  - type: textarea
+    id: difficulty
+    attributes:
+      label: Was this hard to write down? (optional, and genuinely useful)
+      description: >-
+        If you could not pin down an assumption, or you found that different
+        papers state the claim in incompatible ways, please say so. Such cases
+        tell us something about how the result sits in the literature.

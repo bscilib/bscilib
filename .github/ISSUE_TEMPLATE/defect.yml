@@ -1,0 +1,41 @@
+name: Defect report
+description: Something in the library is wrong, misleading, or misstated.
+title: "[defect] "
+labels: ["defect"]
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of defect?
+      options:
+        - An assumption's stated empirical standing is wrong or out of date
+        - A theorem carries a hypothesis its proof does not use
+        - A source is miscited or the equation does not match the source
+        - Build, tooling, or CI problem
+        - Something else
+    validations:
+      required: true
+
+  - type: input
+    id: where
+    attributes:
+      label: Where
+      placeholder: BSciLib/Assumptions/Discounting.lean, BSciLib.Stationary
+    validations:
+      required: true
+
+  - type: textarea
+    id: what
+    attributes:
+      label: What is wrong
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        A note on the second option. We treat a theorem that states a
+        hypothesis its proof does not use as a genuine defect rather than a
+        style question, since it makes the result look narrower than it is and
+        misleads readers about what the claim requires. Reports of that kind are
+        especially welcome.

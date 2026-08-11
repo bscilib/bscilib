@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bscilib"
+version = "0.1.0.dev0"
+description = "Executable half of BSciLib: schedule semantics, identifiability checks, and metamorphic corpus entries for behavioral models."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "BSciLib contributors" }]
+dependencies = ["sympy>=1.12"]
+
+[project.optional-dependencies]
+test = ["pytest>=8", "hypothesis>=6"]
+onepager = ["reportlab>=4"]
+
+[tool.setuptools.packages.find]
+include = ["bscilib*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

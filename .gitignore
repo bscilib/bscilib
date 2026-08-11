@@ -1,0 +1,21 @@
+# Lean
+/.lake/
+*.olean
+*.ilean
+*.trace
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.hypothesis/
+.venv/
+*.egg-info/
+build/
+dist/
+
+# macOS
+.DS_Store
+
+# Superseded: contents unpacked into docs/, miabs/, and python/
+miabs_starter_kit.zip

@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+title: "BSciLib: a machine-checked library of behavioral theory"
+message: "If you use BSciLib, please cite it using this metadata."
+type: software
+authors:
+  - family-names: Cox
+    given-names: David J.
+repository-code: "https://github.com/bscilib/bscilib"
+abstract: >-
+  A Lean 4 library of derivations in quantitative behavior analysis, together
+  with an executable Python layer for schedule semantics, structural
+  identifiability, and metamorphic testing. Every theorem is stated as an
+  implication over named, documented assumption modules; the library asserts no
+  empirical claim.
+keywords:
+  - behavior analysis
+  - formal verification
+  - Lean 4
+  - reproducibility
+  - structural identifiability
+license: Apache-2.0
+version: 0.1.0-dev
